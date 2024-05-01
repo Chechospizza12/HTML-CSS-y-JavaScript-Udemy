@@ -1,0 +1,17 @@
+.Titulo {
+    text-align: center;
+    font-size: 38px;
+}
+
+.Titulo span {
+    font-size: 20px;
+}
+
+#Titulo {
+    text-align: center;
+    font-size: 38px;
+}
+
+#Titulo span {
+    font-size: 20px;
+}
