@@ -1,17 +1,80 @@
-.Titulo {
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: rgb(252, 210, 26);
+    --gris: #757575;
+}
+
+body {
+    font-size: 16px;
+    /*1rem =10px */
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    background-color: #212121;
+}
+
+/*Aqui se ddefinen las especificaciones para el titulo 1 "Sergio Sarmiento"*/
+.Titulo1 {
+    padding: 10px;
     text-align: center;
-    font-size: 38px;
+    color: var(--primario);
+    margin: 0;
 }
 
-.Titulo span {
-    font-size: 20px;
-}
-
-#Titulo {
+/*Aqui se definen las especificaciones para el titulo 1.1 "Frelancer" hijo del titulo "Sergio Sarmiento"*/
+.Titulo1__span1 {
+    display: block;
+    margin: 10px;
     text-align: center;
-    font-size: 38px;
+    font-size: 25px;
 }
 
-#Titulo span {
-    font-size: 20px;
+/*Aqui definimos las especificaciones para el titulo 2 "Diseño y Desarrollo Web"*/
+.Titulo2 {
+    padding: 10px;
+    text-align: center;
+    color: var(--primario);
+    margin-top: 2rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+/**Aqui definimos las especificaciones para el titulo 2.1 "Freelancer" hijo del titulo "Diseño y Desarrollo Web"*/
+.Titulo2__span2 {
+    display: block;
+    margin: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+/*Aqui definimos las especificaciones del bloque padre "nav_bg"*/
+.nav_bg {
+    background-color: var(--primario);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--gris);
+}
+
+/*Aqui definimos las especificaciones del elemento "nav_bg__contenedor" del bloque padre "nav_bg"*/
+.nav_bg__contenedor {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+/*Aqui definimos las especificaciones de cada item hijo del elemento "nav_bg__contenedor" del bloque padre "nav_bg"*/
+.contenedor__item {
+    color: black;
+    text-decoration: none;
+    padding: 2rem;
+    font-weight: 700;
+
+}
+
+/*Aqui definimos los pseudo-clases de los hijos del elemento "nav_bg__contenedor"*/
+.contenedor__item:hover {
+    background-color: var(--gris);
+    color: white;
+    border-radius: 25px;
 }
