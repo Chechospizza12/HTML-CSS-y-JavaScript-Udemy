@@ -10,14 +10,14 @@ body {
     /*1rem =10px */
     font-family: "Roboto", sans-serif;
     margin: 0;
-    background-color: #212121;
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100%);
 }
 
 /*Aqui se ddefinen las especificaciones para el titulo 1 "Sergio Sarmiento"*/
 .Titulo1 {
     padding: 10px;
     text-align: center;
-    color: var(--primario);
+    color: var(--negro);
     margin: 0;
 }
 
@@ -29,30 +29,20 @@ body {
     font-size: 25px;
 }
 
-/*Aqui definimos las especificaciones del bloque padre "nav_bg"*/
-.nav_bg {
-    background-color: var(--primario);
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--gris);
-}
-
 /*Aqui definimos las especificaciones del elemento "nav_bg__contenedor" del bloque padre "nav_bg"*/
 .nav_bg__contenedor {
-    text-align: center;
     display: flex;
-    flex-direction: column;
+    text-align: center;
     justify-content: space-evenly;
     margin: 0;
+    background-color: var(--primario);
 }
 
-/*Aqui definimos las especificaciones de cada item hijo del elemento "nav_bg__contenedor" del bloque padre "nav_bg"*/
 .contenedor__item {
-    color: black;
     text-decoration: none;
-    padding: 2rem;
     font-weight: 700;
-
+    padding: 2rem;
+    color: var(--negro);
 }
 
 /*Aqui definimos los pseudo-clases de los hijos del elemento "nav_bg__contenedor"*/
@@ -62,18 +52,55 @@ body {
     border-radius: 25px;
 }
 
+.Titulo1__span2 {
+    display: block;
+    margin: 1rem;
+}
+
+/*Especifiaciones para boton "contactar"*/
+.boton {
+    text-decoration: none;
+    color: var(--negro);
+    background-color: var(--primario);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    border: none;
+}
+
+/*Especifiaciones para boton "contactar"*/
+.boton:hover {
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
 /*media queries para tablets*/
-@media (min-width:768px) {
+@media (max-width:768px) {
     .nav_bg__contenedor {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
 /*Media queries para celular*/
 
-@media (min-width:480px) {
+@media (max-width:480px) {
     .nav_bg__contenedor {
-        flex-direction: row;
+        flex-direction: column;
+    }
+
+    .boton {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
     }
 }
 
@@ -95,14 +122,36 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.contenido-hero h2,
-.contenido-hero P {
     color: var(--primario);
 }
 
-.Ubicacion {
+.sombra {
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(120, 120, 120, 1);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(120, 120, 120, 1);
+    box-shadow: 10px 10px 15px 0px rgba(120, 120, 120, 1);
+    background-color: var(--blanco);
+    padding: 5rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0 auto;
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Servicio .Iconos {
+    height: 150px;
+    width: 150px;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+.servicios p {
+    line-height: 2;
 }
